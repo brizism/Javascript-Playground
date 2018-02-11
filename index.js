@@ -33,6 +33,9 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
  
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
+    const totalYears = inventors.reduce((acc, inventor) => acc + (inventor.passed - inventor.year), 0);
+    // first time around we dont have an acc so, we pass 0
+    console.log(totalYears)
 
 // 5. Sort the inventors by years lived
 

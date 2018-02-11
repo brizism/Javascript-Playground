@@ -56,6 +56,12 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+    const byLastname = people.sort((a,b) => {
+      const [aLast, aFirst] = a.split(', ');
+      const [bLast, bFirst] = b.split(', ');
+      return aLast > bLast ? 1 : -1;
+    });
+    console.log(byLastname)
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these

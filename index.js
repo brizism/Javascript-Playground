@@ -47,6 +47,11 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    const category = document.querySelectorAll('.mw-category a');
+    const linksArray = Array.from(category);
+    const de = linksArray
+      .map(link => link.textContent)
+      .filter(streetName => streetName.includes('de'));
 
 
 // 7. sort Exercise

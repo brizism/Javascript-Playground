@@ -111,3 +111,13 @@ const peoples = [
   // Array.prototype.findIndex()
   // Find the comment with this ID
   // delete the comment with the ID of 823423
+  const findId = comments.findIndex(comment => comment.id === 823423);
+  console.log(findId)
+
+  //comments.splice(findId, 1);
+
+  // new array to preserve old one
+  const newComments = [
+      ...comments.slice(0, findId),
+      ...comments.slice(findId + 1)
+  ];

@@ -21,12 +21,15 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
     console.table(fifteen)
 
 // Array.prototype.map()
+// map() always returns the same lenght that you give it. 
 // 2. Give us an array of the inventors' first and last names
     const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
     console.log(fullNames)
   
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
+    const ordered = inventors.sort((a,b) => a.year > b.year ? 1 : -1)
+    console.table(ordered)
  
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?

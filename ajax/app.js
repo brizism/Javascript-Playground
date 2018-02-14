@@ -18,6 +18,11 @@ const data = {
 };
 
 // Create Post
-http.post('http://jsonplaceholder.typicode.com/posts', data, function(err, post){
+// http.post('http://jsonplaceholder.typicode.com/posts', data, function(err, post){
+//   err ? console.log(err) : console.log(post);
+// })
+
+// Update Post
+http.put('http://jsonplaceholder.typicode.com/posts/5', data, function(err, post){
   err ? console.log(err) : console.log(post);
 })

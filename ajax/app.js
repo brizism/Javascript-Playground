@@ -23,6 +23,11 @@ const data = {
 // })
 
 // Update Post
-http.put('http://jsonplaceholder.typicode.com/posts/5', data, function(err, post){
-  err ? console.log(err) : console.log(post);
-})
+// http.put('http://jsonplaceholder.typicode.com/posts/5', data, function(err, post){
+//   err ? console.log(err) : console.log(post);
+// })
+
+// Delete Post
+http.delete('http://jsonplaceholder.typicode.com/posts/1', function(err, response){
+   err ? console.log(err) : console.log(response);
+ })

@@ -53,14 +53,41 @@ function isPalindrome(str) {
 // Return an integer in reverse
 // ex. reverseInt(521) === 125
 
-function reverseInt(int) {}
+function reverseInt(int) {
+  const revString = int.toString().split('').reverse().join('');
+
+  // using sign method to add sign if there is one
+  return parseInt(revString) * Math.sign(int);
+}
 
 
 
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
 // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-function capitalizeLetters(str) {}
+function capitalizeLetters(str) {
+  // const strArr = str.toLowerCase().split(' ');
+  // for(let i=0; i< strArr.length; i++){
+  //   strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
+  // }
+  // return strArr.join(' ');
+
+  //////////////////////////////////
+
+  // return str
+  //   .toLowerCase()
+  //   .split(' ')
+  //   .map(word => word[0].toUpperCase() + word.substr(1))
+  //   .join(' ')
+
+  //////////////////////////////////
+
+  return str
+    .toLowerCase()
+    // replace method takes a regex and func as parameters
+    // \b is a word boundary, range of a to z, global and case insensitive
+    .replace(/\b[a-z]/gi, char => char.toUpperCase());
+}
 
 
 
@@ -78,6 +105,6 @@ function fizzBuzz() {}
 
 
 // Call Function
-const output = isPalindrome('madam');
+const output = capitalizeLetters('briseiDa monTiel espiNOZA');
 
 console.log(output);

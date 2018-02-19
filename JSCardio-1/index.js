@@ -3,7 +3,38 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-  return 'Let\'s Start'
+  // split turns a string into an array & join turns it back into a string
+  // return str
+  //   .split('')
+  //   .reverse()
+  //   .join('');
+
+  ///////////////////////////
+
+  // let revString = '';
+  // for(let i = str.length - 1; i >= 0; i--){
+  //   revString += str[i]
+  // }
+  // return revString;
+
+  // let revString = '';
+  // for(let i = 0; i <= str.length -1; i++){
+  //   revString = str[i] + revString
+  // }
+  // return revString;
+
+  // let revString = '';
+  // for(let i of str){
+  //   revString = i + revString
+  // }
+  // return revString
+
+  // let revString = '';
+  // str.split('').forEach(i => revString = i + revString);
+  // return revString;
+
+  return str.split('').reduce((acc, curr) => curr + acc);
+
 }
 
 

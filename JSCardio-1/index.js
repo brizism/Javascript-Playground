@@ -94,7 +94,22 @@ function capitalizeLetters(str) {
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
 // ex. maxCharacter('javascript') == 'a'
-function maxCharacter(str) {}
+function maxCharacter(str) {
+  const charMap = {};
+  let maxNum = 0;
+  let maxChar = '';
+
+  str.split('').forEach(i => charMap[i] ? charMap[i]++ : charMap[i] = 1);
+  // for in to loop through an object
+  for(let i in charMap){
+    if(charMap[i] > maxNum){
+      maxNum = charMap[i];
+      maxChar = i;
+    }
+  }
+  console.log(`Letter ${maxChar} is the most common character in ${str} with ${maxNum} repeats`);
+  // return maxChar;
+}
 
 
 
@@ -105,6 +120,6 @@ function fizzBuzz() {}
 
 
 // Call Function
-const output = capitalizeLetters('briseiDa monTiel espiNOZA');
+const output = maxCharacter('javascript');
 
 console.log(output);

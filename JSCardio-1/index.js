@@ -145,7 +145,7 @@ function longestWord(sen) {
   // SOLUTION 1 - Return a single longest word
   // SOLUTION 2 - Return an array and include multiple words if they have the same length
   // SOLUTION 3 - Only return an array if multiple words, otherwise return a string
-  
+
   // match below strips out any punctuation against regex provided
   const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
 
@@ -164,7 +164,39 @@ function longestWord(sen) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3],[4, 5, 6],[7]]
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
-function chunkArray(arr, len) {}
+function chunkArray(arr, len) {
+  // SOLUTION 1 
+
+  // // Init chunked arr
+  // const chunkedArr = [];
+  // // Set index
+  // let i = 0;
+  
+  // // Loop while index is less than the array length
+  // while(i < arr.length){
+  //   // Slice out from the index to the index + the chunk length and push on to the chunked array
+  //   chunkedArr.push(arr.slice(i, i + len));
+  //   // Increment by chunk length
+  //   i += len;
+  // }
+  // return chunkedArr;
+
+  // SOLUTION 2 
+
+  // Init chunked arr
+  const chunkedArr = [];
+
+  // Loop through arr
+  arr.forEach(val => {
+    // Get last element
+    const last = chunkedArr[chunkedArr.length - 1]
+
+    // Check if last and if last length is equal to the chunk length
+    !last || last.length === len ? chunkedArr.push([val]) : last.push(val)
+  })
+
+  return chunkedArr
+}
 
 // CHALLENGE 3: FLATTEN ARRAY
 // Take an array of arrays and flatten to a single array
@@ -187,6 +219,6 @@ function isAnagram(str1, str2) {}
 function letterChanges(str) {}
 
 // Call Function
-const output = longestWord('Hello there, my name is Brad');
+const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
 
 console.log(output);

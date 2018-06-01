@@ -27,7 +27,7 @@ body {
 }
 
 .hovered {
-  background: blue;
+  background: #f4f4f4;
   border-style: dashed;
 }
 

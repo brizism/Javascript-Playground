@@ -1,0 +1,36 @@
+body {
+  background: aliceblue;
+}
+
+.fill {
+  background-image: url('https://78.media.tumblr.com/2e60b099930bdaf2a1eaed0d8cd78531/tumblr_mghz5gWkb71r2xkzgo1_500.png');
+  background-position: 70%;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+.empty {
+  display: inline-block;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  border: 3px blue solid;
+  background: white;
+}
+
+.hold {
+  border: solid black 4px;
+}
+
+.hovered {
+  background: blue;
+  border-style: dashed;
+}
+
+.invisible {
+  display: none;
+}
